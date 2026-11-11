@@ -25,3 +25,10 @@ backend/backend/uploads/
 # Operating system
 .DS_Store
 Thumbs.db
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
