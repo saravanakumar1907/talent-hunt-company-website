@@ -1,0 +1,27 @@
+# React
+node_modules/
+dist/
+
+# Java / Maven
+target/
+
+# Database credentials
+application.properties
+backend/backend/src/main/resources/application.properties
+
+# Uploaded images
+uploads/
+backend/backend/uploads/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db

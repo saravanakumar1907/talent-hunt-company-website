@@ -1,0 +1,733 @@
+
+/* =========================================
+   1. GLOBAL CSS
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  color: #263445;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================
+   2. NAVBAR
+========================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+  min-height: 95px;
+  background: linear-gradient(120deg, #000d35, #102a60);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.company-logo {
+  width: 100px;
+  height: 85px;
+  object-fit: contain;
+  display: block;
+}
+
+.company-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Navbar Menu */
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding: 11px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #38bdf8;
+  background: rgba(255, 255, 255, 0.10);
+  transform: translateY(-2px);
+}
+
+.navbar ul li a.active {
+  color: #38bdf8;
+  background: transparent;
+}
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 30fr) minmax(0, 70fr);
+  width: 100%;
+  min-height: 450px;
+  background: #07152e;
+  color: white;
+  overflow: hidden;
+}
+
+/* Left Quote */
+
+.hero-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px;
+  border-right: 2px solid #38bdf8;
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.quote-mark {
+  font-size: 60px;
+  color: #38bdf8;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.hero-quote h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 34px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.empower-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+.talent-text {
+  color: #38bdf8;
+}
+
+.tomorrow-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+.better-text {
+  color: #f5f5f5;
+  text-decoration: underline;
+  text-decoration-color: #38bdf8;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+}
+
+.hero-quote p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #dbeafe;
+}
+
+.hero-quote button {
+  width: fit-content;
+  padding: 13px 22px;
+  background: #38bdf8;
+  color: #07152e;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  animation: buttonGlow 2s ease-in-out infinite alternate;
+  transition: 0.3s;
+}
+
+.hero-quote button:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Right Technical Image */
+
+.hero-technical {
+  width: 100%;
+  height: 550px;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  background: #102a43;
+}
+
+.hero-technical img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  object-fit: cover;
+  object-position: center;
+  animation: techZoom 5s ease-in-out infinite alternate;
+}
+
+/* =========================================
+   4. ABOUT SECTION
+========================================= */
+
+#about {
+  background: #e3f2fd;
+}
+
+.about-section {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 36px;
+  color: #102a43;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  max-width: 850px;
+  margin: 20px auto;
+  line-height: 1.8;
+  color: #555;
+  font-size: 16px;
+}
+
+/* =========================================
+   5. SERVICES SECTION
+========================================= */
+
+#services {
+  background: #ffffff;
+}
+
+.services-section {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.services-section h1 {
+  font-size: 36px;
+  color: #102a43;
+  margin-bottom: 20px;
+}
+
+.services-section > p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.service-container {
+  display: flex;
+  gap: 25px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1 1 220px;
+  padding: 30px 20px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #38bdf8;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #102a43;
+  font-size: 20px;
+}
+
+.service-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* =========================================
+   6. PRODUCTS SECTION
+========================================= */
+
+#products {
+  background: #f3e8ff;
+}
+
+.products-section {
+  padding: 65px 8%;
+  text-align: center;
+  background: transparent;
+}
+
+.products-section h1 {
+  font-size: 36px;
+  color: #102a43;
+  margin-bottom: 20px;
+}
+
+.products-section > p {
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.products-section .service-card {
+  background: #ffffff;
+}
+
+/* =========================================
+   7. CONTACT SECTION
+========================================= */
+
+#contact {
+  background: #e8f5e9;
+}
+
+.contact-section {
+  padding: 65px 8%;
+  background: transparent;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 650px;
+  margin: auto;
+}
+
+.contact-container h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #102a43;
+}
+
+.contact-container > p {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+/* Company Contact Details */
+
+
+.company-contact-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+  padding: 15px;
+  background: #102a60;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+.company-contact-info h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.company-contact-info span,
+.company-contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.company-contact-info a {
+  font-weight: 600;
+}
+
+.company-contact-info a:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* Contact Detail Layout */
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0;
+  max-width: 100%;
+}
+
+.contact-detail p,
+.contact-detail a {
+  color: #333;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-detail a:hover {
+  color: #0878c9;
+  text-decoration: underline;
+}
+
+/* =========================================
+   8. FOOTER
+========================================= */
+
+.footer {
+  background: #102a43;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   9. ANIMATIONS
+========================================= */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes techZoom {
+  from {
+    transform: scale(1);
+    filter: brightness(0.9);
+  }
+
+  to {
+    transform: scale(1.04);
+    filter: brightness(1.15);
+  }
+}
+
+@keyframes buttonGlow {
+  from {
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.3);
+  }
+
+  to {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+  }
+}
+
+/* =========================================
+   10. TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+
+  .navbar ul {
+    gap: 5px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+    padding: 9px 11px;
+  }
+
+  .company-name {
+    font-size: 19px;
+  }
+
+  .hero {
+    grid-template-columns: 45% 55%;
+  }
+
+  .hero-quote {
+    padding: 25px;
+  }
+
+  .empower-text,
+  .tomorrow-text {
+    font-size: 22px;
+  }
+}
+
+/* =========================================
+   11. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .company-logo {
+    width: 75px;
+    height: 65px;
+  }
+
+  .company-name {
+    font-size: 19px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+    padding: 9px 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-quote {
+    border-right: none;
+    border-bottom: 2px solid #38bdf8;
+    padding: 30px 20px;
+  }
+
+  .hero-quote h2 {
+    font-size: 28px;
+  }
+
+  .empower-text,
+  .tomorrow-text {
+    font-size: 21px;
+  }
+
+  .hero-technical {
+    height: 300px;
+    min-height: 280px;
+  }
+
+  .hero-technical img {
+    min-height: 280px;
+  }
+
+  .about-section,
+  .services-section,
+  .products-section,
+  .contact-section {
+    padding: 45px 5%;
+  }
+
+  .about-section h1,
+  .services-section h1,
+  .products-section h1,
+  .contact-container h1 {
+    font-size: 29px;
+  }
+
+  .service-container {
+    flex-direction: column;
+  }
+
+  
+  .company-contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   12. SMALL MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+  .company-name {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .company-logo {
+    width: 65px;
+    height: 60px;
+  }
+
+  .navbar ul {
+    gap: 4px;
+  }
+
+  .navbar ul li a {
+    font-size: 12px;
+    padding: 8px 9px;
+  }
+
+  .empower-text,
+  .tomorrow-text {
+    font-size: 18px;
+  }
+
+  .hero-quote p {
+    font-size: 14px;
+  }
+
+  .hero-technical,
+  .hero-technical img {
+    height: 230px;
+    min-height: 220px;
+  }
+
+  .company-contact-info {
+    font-size: 12px;
+    gap: 12px;
+  }
+}
+
+
+/* =========================================
+   13. SECTION SCROLL
+========================================= */
+
+#home,
+#about,
+#services,
+#products,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+/* =========================================
+   14. PREMIUM SECTION BACKGROUNDS
+========================================= */
+
+/* ABOUT US - PLATINUM BLUE */
+#about {
+  background: #D9E2EC;
+}
+
+/* SERVICES - SAGE GREEN */
+#services {
+  background: #DCE8DF;
+}
+
+/* PRODUCTS - CHAMPAGNE BEIGE */
+#products {
+  background: #E9DFD0;
+}
+
+/* CONTACT US - ROYAL LAVENDER */
+#contact {
+  background: #E4DFF0;
+}
+
+/* Inner sections transparent */
+
+.about-section,
+.services-section,
+.products-section,
+.contact-section {
+  background: transparent;
+}
+
+/* Premium headings */
+
+.about-section h1,
+.services-section h1,
+.products-section h1,
+.contact-container h1 {
+  color: #102A43;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   15. ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
